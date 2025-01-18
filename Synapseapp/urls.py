@@ -1,9 +1,6 @@
 from django.urls import path
 from Synapseapp import views
 from .views import index, hospital_login, logout_view, bed_management
-# prototype/urls.py
-from django.contrib import admin
-from django.urls import path, include
 
 urlpatterns = [
     # Role and Login Paths
@@ -29,7 +26,6 @@ urlpatterns = [
     path('radiology/', views.radiology, name='radiology'),
     path('out_patient/', views.out_patient, name='out_patient'),
     path('clinical/', views.clinical, name='clinical'),
-    path('admin/', admin.site.urls),
     path('', views.role_selection, name="role_selection"),
     path('logout/', views.logout_view, name="logout"),
     path('hospital-login/', views.hospital_login, name='hospital_login'),
